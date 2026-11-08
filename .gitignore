@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+light-history.json
+rk10-*.json
+*-history.json
+*-pending.json
+*-errors.json
