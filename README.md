@@ -1,6 +1,6 @@
 # Світло ЖК «Республіка» — iPhone (Scriptable)
 
-![Віджети світла для iPhone: статус, статистика, графіки, план vs факт](assets/preview.svg)
+![Віджети світла для iPhone — промокартинка з усіма віджетами](svitlo-respublika-promo.jpg)
 
 **[⬇️ Завантажити готовий ZIP v1.0.1](https://github.com/cherkuni-hub/svitlo-respublika/releases/download/v1.0.1/Svitlo_Respublika_iPhone_v1.0.1.zip)** · [Усі релізи](https://github.com/cherkuni-hub/svitlo-respublika/releases)
 
