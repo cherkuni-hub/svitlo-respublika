@@ -1,0 +1,60 @@
+name: Publish v1.0.1
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/release-v1.0.1.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate distribution files
+        shell: bash
+        run: |
+          test -s INSTALL.js
+          test -s README.md
+          test -s VERSION.txt
+          test "$(find source -type f -name '*.js' | wc -l)" -eq 9
+          node --check INSTALL.js
+          find source -name '*.js' -print0 | while IFS= read -r -d '' file; do node --check "$file"; done
+
+      - name: Create installation archive
+        shell: bash
+        run: |
+          zip -q -r "Svitlo_Respublika_iPhone_v1.0.1.zip" INSTALL.js README.md VERSION.txt source/
+          sha256sum "Svitlo_Respublika_iPhone_v1.0.1.zip"
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          cat > RELEASE_NOTES.md <<'EOF'
+          ## Світло ЖК Республіка — v1.0.1
+
+          Перший комплект Scriptable-віджетів для iPhone з інсталятором і вибором однієї з 13 адрес ЖК.
+
+          ### У комплекті
+          - `INSTALL.js` — встановлення дев'яти скриптів під вибрану адресу
+          - віджети статусу світла, тижневої й місячної статистики, графіків на сьогодні/завтра та плану vs факту
+          - обробка Telegram-сповіщень і аварій, перевірка помилок
+          - інструкція в `README.md`
+
+          ### Виправлено
+          - Запуск імпорту графіків через Shortcuts без `Alerts are not supported in Siri`: `config.runsWithSiri`.
+          - Перевірено вручну статус, плановий графік і аварійне повідомлення для РК2А на iPhone.
+
+          **Важливо:** для автоматичного оновлення потрібно бути учасником каналу «🔊 ЖК Республіка: Сповіщення» й налаштувати Shortcuts. Збір даних локальний, залежить від системних сповіщень. Неофіційний проєкт мешканців.
+          EOF
+          gh release view v1.0.1 >/dev/null 2>&1 && {
+            gh release upload v1.0.1 Svitlo_Respublika_iPhone_v1.0.1.zip --clobber
+            gh release edit v1.0.1 --notes-file RELEASE_NOTES.md
+          } || gh release create v1.0.1 Svitlo_Respublika_iPhone_v1.0.1.zip --title "Світло ЖК Республіка v1.0.1" --notes-file RELEASE_NOTES.md --target "$GITHUB_SHA"
