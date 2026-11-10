@@ -59,7 +59,7 @@
 </style>
 </head>
 <body>
-<header><a class="brand" href="#top">⚡ Світло <span>Республіка</span></a><nav><a href="#dashboard">Графіки</a><a href="#install">Встановлення</a><a href="#widgets-setup">Віджети на iPhone</a><a href="#automation">Автоматизації</a><a href="#faq">FAQ</a></nav></header>
+<header><a class="brand" href="#top">⚡ Світло <span>Республіка</span></a><nav><a href="#dashboard">Графіки</a><a href="#install">Встановлення</a><a href="#widgets-setup">Віджети на iPhone</a><a href="#automation">Автоматизації</a><a href="#diagnostics">Діагностика</a><a href="#faq">FAQ</a></nav></header>
 <main id="top">
 
 <section class="real-showcase wrap" id="dashboard">
@@ -81,14 +81,14 @@
 <div class="card"><div class="emoji">📅</div><h3>Статистика місяця</h3><p>Огляд світла за місяць на одному екрані.</p></div>
 </div>
 <h3 style="margin:34px 0 6px">Доступні адреси</h3><p class="sub" style="margin-bottom:6px">Під час встановлення оберіть свою адресу. У комплекті підтримуються 13 адрес.</p><div class="addresses"><span>Т4А</span><span>ТР1</span><span>ТР3</span><span>РК2А</span><span>ТР5</span><span>РК4</span><span>РК6</span><span>ТР4</span><span>БШ7</span><span>БШ9</span><span>БШ10/8</span><span>РК10</span><span>БШ8</span></div></section>
-<section class="section wrap" id="install"><h2>Встановлення API v2.0.2</h2><p class="sub">Поточний стан світла береться з API мешканця. Для графіків продовжує працювати Telegram.</p>
+<section class="section wrap" id="install"><h2>Встановлення API v2.0.3</h2><p class="sub">Поточний стан світла береться з API мешканця. Для графіків продовжує працювати Telegram.</p>
 <div class="step"><div class="num">1</div><div><h3>Установіть Scriptable</h3><p><a href="https://apps.apple.com/app/scriptable/id1405459188">Scriptable в App Store</a> та дозвольте доступ до iCloud Drive.</p></div></div>
 <div class="step"><div class="num">2</div><div><h3>Отримайте персональний API-токен</h3><p>Відкрийте <a href="https://chatbot.respublika.pp.ua/resident/" target="_blank" rel="noopener noreferrer"><strong>кабінет мешканця</strong></a>, увійдіть через Telegram, пройдіть перевірку доступу та створіть особистий API-токен (починається з <code>rsp_</code>). Скопіюйте токен: його потрібно ввести під час установлення. <strong>Не публікуйте й нікому не надсилайте токен.</strong></p></div></div>
-<div class="step"><div class="num">3</div><div><h3>Завантажте ZIP v2.0.2</h3><p><a href="https://github.com/cherkuni-hub/svitlo-respublika/raw/refs/heads/main/Svitlo_Respublika_iPhone_v2.0.2.zip"><strong>Завантажити архів v2.0.2</strong></a>, розпакуйте його у застосунку «Файли» й перемістіть <code>INSTALL.js</code> до «iCloud Drive → Scriptable». <a href="https://raw.githubusercontent.com/cherkuni-hub/svitlo-respublika/main/INSTALL.js">Пряме посилання на установник</a> — резервний варіант.</p></div></div>
+<div class="step"><div class="num">3</div><div><h3>Завантажте ZIP v2.0.3</h3><p><a href="https://github.com/cherkuni-hub/svitlo-respublika/raw/refs/heads/main/Svitlo_Respublika_iPhone_v2.0.3.zip"><strong>Завантажити архів v2.0.3</strong></a>, розпакуйте його у застосунку «Файли» й перемістіть <code>INSTALL.js</code> до «iCloud Drive → Scriptable». <a href="https://raw.githubusercontent.com/cherkuni-hub/svitlo-respublika/main/INSTALL.js">Пряме посилання на установник</a> — резервний варіант.</p></div></div>
 <div class="step"><div class="num">4</div><div><h3>Виберіть адресу та введіть токен</h3><p>Відкрийте Scriptable → <strong>INSTALL</strong> → запуск. Виберіть одну з 13 адрес, вставте API-токен. Установник перевірить його та створить скрипти «Республіка · …» <strong>без «ТЕСТ» у назві</strong>. Токен зберігається у захищеному сховищі Keychain на вашому iPhone.</p></div></div>
 <div class="step"><div class="num">5</div><div><h3>Додайте віджети та імпорт графіків</h3><p>Установник створює скрипти, <strong>але не додає віджети автоматично</strong>. Дивіться розділ <a href="#widgets-setup">«Як додати віджети на iPhone»</a>: там є розміри, точні назви та виправлення «Script not found». Для планових графіків потрібна лише одна автоматизація Telegram.</p></div></div>
 <div class="callout"><strong>Оновлення з v1.0.1:</strong> установник зберігає старі файли історії та графіків, робить резервну копію історії та переносить її в API-статистику. Не видаляйте файли <code>.json</code> вручну. Вимкніть попередню автоматизацію Telegram для «Світло вдома»: відтепер фактичний стан отримуємо з API.</div>
-<div class="callout"><strong>Автоматичне прибирання старих скриптів:</strong> після встановлення v2.0.2 установник запропонує перенести застарілі й тестові <code>.js</code> у папку «Архів старих скриптів». Підтверджуйте це лише після перепризначення віджетів на «Республіка · …» та оновлення автоматизації Telegram на «Республіка · Імпорт графіка». Файли <code>.json</code>, історія світла, графіки й токени залишаються без змін.</div>
+<div class="callout"><strong>Автоматичне прибирання старих скриптів:</strong> після встановлення v2.0.3 установник запропонує перенести застарілі й тестові <code>.js</code> у папку «Архів старих скриптів». Підтверджуйте це лише після перепризначення віджетів на «Республіка · …» та оновлення автоматизації Telegram на «Республіка · Імпорт графіка». Файли <code>.json</code>, історія світла, графіки й токени залишаються без змін.</div>
 <div class="callout"><strong>Обмеження iOS:</strong> оновлення віджета у фоні контролює iOS. Перевірка API не гарантується щохвилини, а пропущені між перевірками перемикання не завжди можна відновити без історії на сервері.</div></section>
 <section class="section wrap" id="widgets-setup">
 <h2>Як додати віджети на iPhone</h2>
@@ -117,6 +117,12 @@
 Run Script "Республіка · Імпорт графіка"
 with: Notification → Body</div></div>
 <p class="sub">Для користувачів v1.0.1: <strong>вимкніть стару автоматизацію «Світло вдома»</strong>. Її більше не потрібно використовувати для обліку фактичних перемикань. Наявні графіки та історію не видаляйте.</p></section>
+<section class="section wrap" id="diagnostics"><h2>Журнал роботи й діагностика</h2>
+<p class="sub">У v2.0.3 кожен скрипт записує запуск, завершення, час виконання та помилки. API фіксує результат запиту, а імпортер графіків — чи прийшло сповіщення, обсяг тексту й результат розпізнавання.</p>
+<div class="step"><div class="num">1</div><div><h3>Відкрийте Scriptable</h3><p>Запустіть скрипт <strong>«Республіка · Діагностика»</strong> — він створюється установником автоматично.</p></div></div>
+<div class="step"><div class="num">2</div><div><h3>Перегляньте останні події</h3><p>Натисніть <strong>«Помилки і пропуски»</strong>, щоб побачити невдалий імпорт графіка, збій API або іншу помилку. Для кожного запису є час і назва скрипта.</p></div></div>
+<div class="step"><div class="num">3</div><div><h3>Надішліть журнал для перевірки</h3><p>Натисніть <strong>«Скопіювати 50 записів»</strong> і вставте текст у повідомлення автору. Персональний API-токен у журнал не записується. Перед надсиланням перевірте, чи немає в тексті іншої приватної інформації.</p></div></div>
+<div class="callout"><strong>Важливо:</strong> якщо Telegram взагалі не надіслав сповіщення, Scriptable не зможе записати його отримання. Журнал допомагає розрізнити «прийшло, але не розпізналося» та «немає запису про отримання». Файл журналу зберігається локально: <code>respublika-diagnostics-v1.json</code>. Історія світла та графіки не змінюються.</div></section>
 <section class="section wrap" id="faq"><h2>Питання та відповіді</h2><p class="sub">Що варто знати перед встановленням.</p>
 <details><summary>Чи потрібна реєстрація?</summary><p>Так. Для API потрібна верифікація в кабінеті мешканця через Telegram та персональний токен: https://chatbot.respublika.pp.ua/resident/. Для графіків також потрібні Telegram та Команди.</p></details>
 <details><summary>Чому віджет не показує історію за минулий місяць?</summary><p>Для нових установлень історія починається з першого підтвердженого стану API. Під час оновлення з v1.0.1 старі події Telegram зберігаються й переносяться. Непомічені API перемикання за минулі дні відновити автоматично неможливо.</p></details>
@@ -125,10 +131,11 @@ with: Notification → Body</div></div>
 <details><summary>Чи можна натиснути на «План vs Факт»?</summary><p>Так. Цей віджет відкриває детальний звіт за день, тиждень і місяць.</p></details>
 <details><summary>Чи передаються мої дані комусь?</summary><p>Сайт не збирає токени. Скрипти на iPhone надсилають персональний токен лише API chatbot.respublika.pp.ua через HTTPS, а токен зберігається у Keychain. Журнали й графіки зберігаються локально.</p></details>
 <details><summary>Після очищення віджет показує «Script not found». Що робити?</summary><p>Затисніть віджет → «Редагувати віджет» → «Script» → виберіть відповідний новий «Республіка · …». Старий скрипт міг бути перенесений в архів. Видаляти історію або перевстановлювати API не потрібно. Повна інструкція — <a href="#widgets-setup">вище</a>.</p></details>
+<details><summary>Де подивитися логи віджетів і графіків?</summary><p>Відкрийте Scriptable → «Республіка · Діагностика». Можна переглянути помилки й пропуски або скопіювати останні 50 записів. Якщо повідомлення Telegram взагалі не надійшло до Scriptable, воно не може з’явитися в журналі.</p></details>
 <details><summary>Що робити, якщо щось не працює?</summary><p>Напишіть автору в Telegram або створіть GitHub Issue. Зазначте, яка саме автоматизація чи віджет не працюють, але не публікуйте приватну інформацію.</p></details>
 <div class="buttons" style="margin-top:32px"><a class="btn" href="https://t.me/cherkungt">Написати автору в Telegram</a><a class="btn secondary" href="https://github.com/cherkuni-hub/svitlo-respublika/issues">Помилки та ідеї · GitHub</a></div></section>
 </main>
-<footer><div class="wrap foot"><div>⚡ Світло Республіка · Неофіційний проєкт мешканця ЖК · v2.0.2</div><a href="https://github.com/cherkuni-hub/svitlo-respublika">Код на GitHub</a></div></footer>
+<footer><div class="wrap foot"><div>⚡ Світло Республіка · Неофіційний проєкт мешканця ЖК · v2.0.3</div><a href="https://github.com/cherkuni-hub/svitlo-respublika">Код на GitHub</a></div></footer>
 <script>
 (function(){
  const grid=document.getElementById("calendar-sample");if(!grid)return;
