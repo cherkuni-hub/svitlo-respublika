@@ -12,7 +12,7 @@
 
 1. Установіть [Scriptable](https://apps.apple.com/app/scriptable/id1405459188) на iPhone.
 2. **Отримайте особистий API-токен у [кабінеті мешканця](https://chatbot.respublika.pp.ua/resident/).** Авторизуйтеся через Telegram, пройдіть перевірку доступу до ЖК та створіть токен (починається з `rsp_`). Скопіюйте його: токен показується під час створення, не надсилайте його іншим.
-3. Завантажте [INSTALL.js](https://raw.githubusercontent.com/cherkuni-hub/svitlo-respublika/main/INSTALL.js). На iPhone збережіть його через «Поділитися → Зберегти у Файли» в **iCloud Drive → Scriptable**.
+3. **[Завантажте ZIP v2.0.0](https://github.com/cherkuni-hub/svitlo-respublika/raw/refs/heads/main/Svitlo_Respublika_iPhone_v2.0.0.zip)** та розпакуйте його у «Файлах». Перемістіть файл **INSTALL.js** до **iCloud Drive → Scriptable**. [Пряме посилання на INSTALL.js](https://raw.githubusercontent.com/cherkuni-hub/svitlo-respublika/main/INSTALL.js) — якщо потрібне встановлення без архіву.
 4. Запустіть **INSTALL** у Scriptable, виберіть свою адресу та вставте особистий API-токен. Установник перевірить доступ до датчиків цієї адреси до заміни робочих скриптів.
 5. Додайте віджети Scriptable на екран iPhone, призначивши відповідні скрипти з префіксом **«Республіка · »**. У назвах немає «ТЕСТ».
 6. Для планових графіків налаштуйте одну автоматизацію Telegram, як описано нижче.
