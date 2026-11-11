@@ -47,11 +47,11 @@
 /* Real iPhone screenshots for notification automation setup */
 .guide-shot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
 .guide-shot{min-width:0;margin:0;border-radius:15px;overflow:hidden;background:#080a0e;border:1px solid #36444e}
-.guide-shot a{display:block;aspect-ratio:9/13;overflow:hidden;text-align:center}
-.guide-shot img{display:block;height:100%;width:100%;object-fit:cover;object-position:top center;background:#000;transition:transform .2s}
+.guide-shot a{display:block;text-align:center}
+.guide-shot img{display:block;height:auto;width:100%;background:#000;transition:transform .2s}
 .guide-shot a:hover img{transform:scale(1.025)}
 .guide-shot figcaption{font-size:13px;color:#c4d8e2;padding:12px 12px 14px;line-height:1.45}
-@media(max-width:620px){.guide-shot-grid{grid-template-columns:1fr;gap:15px}.guide-shot{max-width:420px;margin-inline:auto;width:100%}.guide-shot a{aspect-ratio:9/15}.guide-shot figcaption{font-size:13px}}
+@media(max-width:620px){.guide-shot-grid{grid-template-columns:1fr;gap:15px}.guide-shot{max-width:420px;margin-inline:auto;width:100%}.guide-shot a{display:block}.guide-shot figcaption{font-size:13px}}
 </style>
 <style>
 .real-showcase{padding-top:48px;padding-bottom:35px}
